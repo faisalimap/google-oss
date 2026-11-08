@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Search the web with Google OSS.">
+  <title>Google OSS</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <nav class="top-links" aria-label="Top links">
+      <a href="/" class="top-link">Google OSS</a>
+      <a href="https://www.google.com/advanced_search" target="_blank" rel="noopener">Advanced search</a>
+      <button class="apps-button" type="button" aria-label="About Google OSS" title="About Google OSS">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="5" r="1.5"/><circle cx="12" cy="5" r="1.5"/><circle cx="19" cy="5" r="1.5"/><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/><circle cx="5" cy="19" r="1.5"/><circle cx="12" cy="19" r="1.5"/><circle cx="19" cy="19" r="1.5"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="home" id="home">
+      <a class="wordmark" href="/" aria-label="Google OSS home">
+        <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span><span class="oss"> OSS</span>
+      </a>
+      <form class="search-form home-search" id="search-form" role="search" autocomplete="off">
+        <button class="icon-button search-leading" type="button" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+        </button>
+        <input id="search-input" name="q" type="search" maxlength="200" aria-label="Search" autocomplete="off" spellcheck="false">
+        <button class="icon-button clear-button" id="clear-button" type="button" aria-label="Clear search" title="Clear">×</button>
+        <button class="icon-button voice-button" type="button" aria-label="Voice search is not available" title="Voice search unavailable">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2.5" width="6" height="12" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3m-4 0h8"/></svg>
+        </button>
+        <button class="icon-button lens-button" type="button" aria-label="Image search is not available" title="Image search unavailable">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5h3l1.5-2h7l1.5 2h3v12H4z"/><circle cx="12" cy="13.5" r="3.5"/></svg>
+        </button>
+      </form>
+      <div class="home-buttons">
+        <button type="submit" form="search-form">Google OSS Search</button>
+        <button type="button" id="curious-button">I'm Feeling Curious</button>
+      </div>
+      <p class="language-line">Google OSS offered in: <a href="#" id="language-en">English</a></p>
+    </section>
+
+    <section class="results-view" id="results-view" hidden>
+      <div class="results-header">
+        <a class="mini-wordmark" href="/" aria-label="Google OSS home">
+          <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span><span class="oss"> OSS</span>
+        </a>
+        <form class="search-form results-search" id="results-search-form" role="search" autocomplete="off">
+          <input id="results-input" name="q" type="search" maxlength="200" aria-label="Search">
+          <button class="icon-button results-clear" id="results-clear" type="button" aria-label="Clear search">×</button>
+          <span class="divider-icon"></span>
+          <button class="icon-button results-search-button" type="submit" aria-label="Search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+          </button>
+        </form>
+        <div class="results-actions">
+          <button class="apps-button" type="button" aria-label="Google OSS information" title="Google OSS">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="5" r="1.5"/><circle cx="12" cy="5" r="1.5"/><circle cx="19" cy="5" r="1.5"/><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/><circle cx="5" cy="19" r="1.5"/><circle cx="12" cy="19" r="1.5"/><circle cx="19" cy="19" r="1.5"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <nav class="search-tabs" aria-label="Search categories">
+        <a class="tab active" href="#" aria-current="page"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg> All</a>
+        <span class="tab unavailable" title="Image search is not connected"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m21 15-5-5L5 20"/></svg> Images</span>
+        <span class="tab unavailable" title="Video search is not connected"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="13" height="14" rx="2"/><path d="m16 10 5-3v10l-5-3z"/></svg> Videos</span>
+        <span class="tab unavailable" title="News search is not connected"><svg viewBox="0 0 24 24"><path d="M4 5h16v15H4zM8 9h8M8 13h8M8 17h5"/></svg> News</span>
+        <span class="tab unavailable" title="Maps search is not connected"><svg viewBox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15m6-12v15"/></svg> Maps</span>
+      </nav>
+      <div class="results-layout">
+        <div class="main-results">
+          <div class="results-meta" id="results-meta"></div>
+          <div class="loading" id="loading" hidden><span class="spinner"></span> Searching the web…</div>
+          <div class="error-message" id="error-message" hidden></div>
+          <div id="answer-box"></div>
+          <div id="results-list"></div>
+          <section class="people-also-ask" id="people-also-ask" hidden>
+            <h2>People also ask</h2>
+            <div id="questions-list"></div>
+          </section>
+          <div id="related-searches"></div>
+          <nav class="pagination" id="pagination" aria-label="Search result pages"></nav>
+        </div>
+        <aside class="knowledge-panel" id="knowledge-panel" hidden></aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-country">India</div>
+    <div class="footer-bottom">
+      <div class="footer-left">
+        <a href="https://about.google/" target="_blank" rel="noopener">About</a>
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a>
+        <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms</a>
+      </div>
+      <span class="footer-note">Search powered by an independent web search API</span>
+    </div>
+  </footer>
+</body>
+</html>
